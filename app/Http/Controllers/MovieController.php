@@ -38,4 +38,9 @@ class MovieController extends Controller
         $movie->save();
         return back()->with('success', true);
     }
+
+    public function Delete($id){
+        Movie::where('id', $id)->delete();
+        return redirect('/')->with('success', 'Movie Deleted!');
+    }
 }

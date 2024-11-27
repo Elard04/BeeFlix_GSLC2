@@ -18,6 +18,11 @@
             </div>
         </div>
         <div class="row">
+            <div class="col text-center mb-3 mt-3">
+                <a href="{{ route('create') }}" type="button" class="btn btn-dark">Add New Movie</a>
+            </div>
+        </div>
+        <div class="row">
             @foreach ($movies as $movie)
                 <div class="col-sm-3 mb-3 mb-sm-0">
                     <div class="card" style="width: 15rem;">
@@ -27,7 +32,7 @@
                             <p class="card-text">{{ $movie->genre->name }}</p>
                             <p class="card-text">{{ $movie->description }}</p>
                             <p class="card-text">{{ $movie->publish_date }}</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="{{ route('delete', $movie->id) }}" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
                 </div>

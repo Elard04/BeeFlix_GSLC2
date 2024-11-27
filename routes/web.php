@@ -7,3 +7,4 @@ use App\Http\Controllers\MovieController;
 Route::get('/', [MovieController::class, 'MovieList'])->name('movieList');
 Route::get('/create', [MovieController::class, 'Create'])->name('create');
 Route::post('/store', [MovieController::class, 'Store'])->name('store');
+Route::get('/delete/{id}', [MovieController::class, 'Delete'])->name('delete');
